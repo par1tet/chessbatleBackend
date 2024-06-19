@@ -25,4 +25,4 @@ const field = [
 const board = new Board(field)// Создаем доску
 const chessAPIMain = new chessAPI()// Создаем главный API
 
-chessAPIMain.makeMove(board, 'Ne4', 'black')// Делаем ход
+chessAPIMain.makeMove(board, 'Re4', 'black')// Делаем ход
