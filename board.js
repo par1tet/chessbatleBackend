@@ -20,7 +20,7 @@ class Board{// Данный класс реализует доску
         }
     }
 
-    parametresOfMove(move, isMoving = 'white'){
+    parametresOfMove(move, coordsIn, isMoving = 'white'){
         // Данная функция разделяет ход из шахматной нотации, на обьект js который позволяет сделать ход
         let pieceMove = '' // Какая фигура ходит
 
@@ -65,7 +65,8 @@ class Board{// Данный класс реализует доску
                         "gameCoodsX":Math.abs((xCoord - 8)),
                         "gameCoodsY":(yCoord + 1),
                         "arrayCoordsX":xCoord,
-                        "arrayCoordsY":yCoord
+                        "arrayCoordsY":yCoord,
+                        "notationName": this.field[yCoord][xCoord][0]
                     })
                 }
             })
@@ -75,8 +76,14 @@ class Board{// Данный класс реализует доску
 
         // Выеснение какая именно фигура ходит
 
-        if (candidateMovePieces.length === 0){
-            
+        if (candidateMovePieces.length === 2){
+            allPieces.forEach(Piece => {
+                let currentPiece = new Piece()
+
+                if (currentPiece.notationName === pieceMove[0]){
+                    let result = currentPiece.toCanMove(this.field,[candidateMovePieces[0].arrayCoordsY,candidateMovePieces[0].arrayCoordsX],coordsIn)
+                }
+            })
         }
 
         let objectMove = {

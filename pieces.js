@@ -4,6 +4,11 @@ class Piece{
     constructor(notationName){
         this.notationName = notationName
     }
+
+    toCanMove(filed,coordsOut,coordsIn){
+        console.log(filed,coordsOut,coordsIn,)
+        return true;
+    }
 }
 
 class Pawn extends Piece{// Пешка

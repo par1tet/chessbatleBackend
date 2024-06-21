@@ -6,8 +6,8 @@ class chessAPI{
     
     // Класс chessAPI, который является главным для работы с API
 
-    makeMove(board = Board, move, isMoving = 'white') {// Данный метод реализует главную функцию, отвечающию за ход
-        let objectMove = board.parametresOfMove(move, isMoving)
+    makeMove(board = Board, move, coordsIn, isMoving = 'white') {// Данный метод реализует главную функцию, отвечающию за ход
+        let objectMove = board.parametresOfMove(move, coordsIn, isMoving)
         console.log(objectMove)
     }
 }
@@ -25,4 +25,4 @@ const field = [
 const board = new Board(field)// Создаем доску
 const chessAPIMain = new chessAPI()// Создаем главный API
 
-chessAPIMain.makeMove(board, 'Re4', 'black')// Делаем ход
+chessAPIMain.makeMove(board, 'Re4', [2,7], 'black')// Делаем ход
