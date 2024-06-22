@@ -1,4 +1,4 @@
-const Board = require('./board')
+import { Board } from './board.js'
 
 class chessAPI{
     // Рекомундется ознокомиться с whiteboard microsoft
@@ -34,7 +34,7 @@ const field = [
     ['  ','  ','  ','  ','  ','  ','  ','  ',],
 ]
 
-const board = new Board(field)// Создаем доску
-const chessAPIMain = new chessAPI()// Создаем главный API
+export const board = new Board(field)// Создаем доску
+export const chessAPIMain = new chessAPI()// Создаем главный API
 
-chessAPIMain.makeMove(board, 'Re5', 'black')// Делаем ход
+// chessAPIMain.makeMove(board, 'Re5', 'black')// Делаем ход

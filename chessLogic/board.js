@@ -1,6 +1,6 @@
-const allPieces = require('./pieces.js')
+import { allPieces } from './pieces.js'
 
-class Board{// Данный класс реализует доску
+export class Board{// Данный класс реализует доску
     field;
     
     constructor(field){
@@ -118,5 +118,3 @@ class Board{// Данный класс реализует доску
         return objectMove
     }
 }
-
-module.exports = Board;

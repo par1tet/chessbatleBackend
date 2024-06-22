@@ -1,4 +1,5 @@
-import express from 'express'
+import express from 'express';
+import { board } from '../chessLogic/chess.js'
 
 const app = express()
 
@@ -8,6 +9,8 @@ app.listen(PORT, () => {
     console.log(`server has been started. Port is ${PORT}`)
 })
 
-app.get('/', (req,res) => {
-    res.send("hello world")
+app.get('/get_field', (req,res) => {
+    res.send({
+        "field": board.getField()
+    })
 })

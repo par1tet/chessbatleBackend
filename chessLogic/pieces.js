@@ -54,4 +54,4 @@ class King extends Piece{// Король
     }
 }
 
-module.exports = [Pawn,Knight,Bishop,Rook,Queen,King]
+export let allPieces = [Pawn,Knight,Bishop,Rook,Queen,King]
