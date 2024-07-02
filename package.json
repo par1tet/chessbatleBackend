@@ -2,10 +2,13 @@
   "name": "chessapi",
   "version": "1.0.0",
   "main": "index.js",
+  "homepage": "https://par1tet.github.io/chessbatleBackend",
   "type": "module",
   "scripts": {
     "server": "nodemon serverLogic/index.js",
-    "start": "node serverLogic/index.js"
+    "start": "node serverLogic/index.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "par1tet",
@@ -13,10 +16,13 @@
   "description": "hi, if you read",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "fs": "^0.0.1-security",
     "socket.io": "^4.7.5"
   },
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "nodemon": "^3.1.4"
   }
 }
